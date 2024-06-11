@@ -483,6 +483,63 @@ section:nth-child(6) {
 .pickup_inner {
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: right;
+}
+
+.pickup_inner .txtBox {
+    color: #fff;
+}
+
+.pickup_inner .txtBox .topTxt {
+    display: flex;
+    flex-direction: column;
+    font-size: 63px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    line-height: 80px;
+}
+.pickup_inner .txtBox .topTxt em {
+    font-style: normal;
+    font-size: 90px;
+    letter-spacing: 16px;
+    font-weight: bold;
+}
+.pickup_inner .txtBox .topTxt b {
+    font-size: 80px;
+    letter-spacing: 10px;
+}
+.pickup_inner .txtBox .bottomTxt {
+    font-size: 15px;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+}
+.pickup_inner .txtBox .bottomTxt h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.pickup_inner .txtBox span {}
+
+.pickup_inner .txtBox span a {
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: all 0.5s;
+}
+
+.pickup_inner .txtBox span a:hover {
+    background-color: #fff;
+    color: #000;
+    text-decoration: underline;
+}
+
+.pickup_inner .imgBox {
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 
