@@ -367,6 +367,130 @@ section:nth-child(3) {
 }
 
 
+/* 네번째 섹션 설정 */
+section:nth-child(4) {
+    background-image: url(img/summer_bean_bg.png);
+    background-size: cover;
+    background-position: center bottom;
+    height: 400px;
+    padding: 40px 0;
+}
+.summmer_inner {
+    display: flex;
+    justify-content: center;
+}
+.summmer_inner .imgBox {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end
+}
+
+.summmer_inner .txtBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #7E5732;
+}
+.summmer_inner .txtBox h4 {
+    letter-spacing: -2px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.summmer_inner .txtBox h2 {
+    letter-spacing: -1px;
+    font-size: 24px;
+}
+.summmer_inner .txtBox p {
+    letter-spacing: -2px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.summmer_inner .txtBox span {}
+.summmer_inner .txtBox span a {
+    display: inline-block;
+    border: 2px solid #7E5732;
+    color: #7E5732;
+    border-radius: 5px;
+    padding: 8px 20px;
+    transition: all 0.5s;
+    font-size: 14px;
+}
+
+.summmer_inner .txtBox span a:hover {
+    background-color: #7E5732;
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+
+
+/* 다섯번째 섹션 설정 */
+section:nth-child(5) {
+    background-image: url(img/bali_bg.png);
+    background-size: cover;
+    background-position: center bottom;
+    height: 400px;
+}
+.reserve_inner {
+    display: flex;
+    justify-content: flex-end;
+}
+.reserve_inner .txtBox {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.reserve_inner .txtBox span {
+    margin-top: 20px;
+}
+.reserve_inner .txtBox span a {
+    display: inline-block;
+    border: 2px solid #B87643;
+    padding: 8px 20px;
+    border-radius: 5px;
+    color: #B87643;
+    transition: all 0.5s;
+    font-size: 14px;
+}
+.reserve_inner .txtBox span a:hover {
+    background-color: #B87643;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.reserve_inner .imgBox {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+/* 여섯번째 섹션 설정 */
+section:nth-child(6) {
+    background-image: url(img/2024_summer_pick_bg.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 600px;
+    padding: 40px 0;
+    background-attachment: fixed;
+}
+.pickup_inner {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
 
 
 /* 미디어쿼리구간 설정===================================================================================== */
@@ -377,7 +501,10 @@ section:nth-child(3) {
 @media(min-width:1280px){
     
     .header_inner,
-    .reward_inner
+    .reward_inner,
+    .summmer_inner,
+    .reserve_inner,
+    .pickup_inner
      {
         width: 1240px;
         margin: 0 auto;
