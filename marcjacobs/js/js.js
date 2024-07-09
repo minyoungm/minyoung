@@ -1,48 +1,55 @@
 $(document).ready(function () {
-    var i = -1;
-    var no = -1;
+  
+    // .product_inner 안에 있는 subCon의 a를 클릭했을 때, sub이 보이고, main이 사라져라
+    $('.product_inner .subCon a').click(function(e){
+        e.preventDefault()
+        $('.sub').fadeIn()
+        $('.main').fadeOut(function(){
+            $('html, body').scrollTop(0);
+        })
+            
+    })
 
 
-    $('.landing .background li').eq(i).css({ 'opacity': '1' })
+
+    $('.no li').click(function(){
+        var a = $(this).index();
+        // console.log(a)
+
+        $('.background li').css({'opacity':'1'}).stop().animate({'opacity':'0'})
+        $('.background li').eq(a).css({'opaicity':'0'}).stop().animate({'opacity':'1'})
+
+
+        $('.no li').removeClass('on')
+        $(this).addClass('on')
+    });
+
+
+    //슬라이드 투명
+    // 숫자 버튼 효과
+    var b = -1;
+    var c = -1;
 
     setInterval(function () {
-        i++;
-        no++;
 
-        if (i == 3) i = 0
-        if (no == 3) no = 0
+        b++;
+        c++;
+        if (b == 3) b = 0
+        if (c == 3) c = 0
+        // console.log(b)
+        console.log(c)
 
-        // console.log(i)
-        $('.landing .background li').eq(i - 1).stop().animate({ 'opacity': '0' })
-        $('.landing .background li').eq(i).stop().animate({ 'opacity': '1' })
-        $('.background li').removeClass('on_pic')
-        $('.background li').eq(i).addClass('on_pic')
+        $('.background li').eq(b - 1).stop().animate({ 'opacity': '0' }, 800);
+        $('.background li').eq(b).stop().animate({ 'opacity': '1' }, 800)
 
-        //  console.log(no)
-        $('.no span').removeClass('on')
-        $('.no span').eq(no).addClass('on')
+        $('.no li').removeClass('on')
+        $('.no li').eq(c).addClass('on')
 
 
 
 
+    }, 2000);
 
-
-
-
-    }, 2500);
-
-
-    // .no를 클릭했을 때 번호를 구하고 해당번호의 .ladning .background li이 떠라.
-
-    $('.no span').click(function () {
-        var a = $(this).index()
-
-        console.log(a)
-
-
-
-
-    })
 
 
 
@@ -70,19 +77,8 @@ $(document).ready(function () {
     $('.cart_popUp .close').click(function () {
         $('.cart_popUp').hide()
     })
-        // .popUp에 span을 클릭했을 때 .popUp이 닫혀라
+    
         
-
-      // li.subCon 을 클릭했을 때, sub가 보여라
-
-      $('.subCon a').click(function(e){
-        e.preventDefault()
-        $('.main').fadeOut()
-        $('.sub').fadeIn()
-        
-      })
-        
-
 
 
 
