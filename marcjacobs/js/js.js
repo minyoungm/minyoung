@@ -73,7 +73,14 @@ $(document).ready(function () {
         // .popUp에 span을 클릭했을 때 .popUp이 닫혀라
         
 
+      // li.subCon 을 클릭했을 때, sub가 보여라
 
+      $('.subCon a').click(function(e){
+        e.preventDefault()
+        $('.main').fadeOut()
+        $('.sub').fadeIn()
+        
+      })
         
 
 
