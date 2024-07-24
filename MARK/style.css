@@ -98,10 +98,16 @@ section article {
     left: 50%;
     margin-top: -136.5px;
     margin-left: -236px;
-    width: 472px;
-    height: 273px;
+    width: 475px;
+    height: 275px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.main .title_popup img {}
+.main .title_popup img {
+    transform: scale(0.57);
+}
 
 
 .main .imgBox {}
@@ -211,7 +217,7 @@ section article {
     position: absolute;
     left: 50%;
     top: 23%;
-    margin-left: -127.5px;
+    margin-left: -160px;
     z-index: 2;
 }
 .about .iphone .frame img {}
@@ -222,7 +228,7 @@ section article {
     left: 50%;
     top: 23%;
     overflow: hidden;
-    margin-left: -114px;
+    margin-left: -150px;
     border-radius: 55px;
     width: 328px;
     height: 630px;
@@ -237,10 +243,23 @@ section article {
 .about .title {
     position: absolute;
     top: 90px;
-    left: 8%;
-    animation: title linear 1s infinite;
+    left: 10%;
+    animation: title linear 1.5s infinite;
+
 }
-.about .title img {}
+
+.about .title .title_img {
+    width: 450px;
+    height: 310px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.about .title .title_img img {
+    transform: scale(0.6);
+}
 .about .title ul {
     display: flex;
     position: absolute;
@@ -273,7 +292,7 @@ section article {
         transform:  translateY(0);
     }
     50% {
-        transform: translateY(5px);
+        transform: translateY(10px);
     }
     100% {
         transform: translate(0);
@@ -324,29 +343,67 @@ section article {
 
 /* 팝업 이미지 설정 */
 .about .popup1 {}
-.about .popup1 img {
+.about .popup1 div {
     position: absolute;
 }
-.about .popup1 img:nth-child(1) {
-    top: 100px;
+
+.about .popup1 .reminder {
+    top: 80px;
     right: 25%;
+    width: 200px;
+    height: 175px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
-.about .popup1 img:nth-child(2) {
+.about .popup1 .reminder img {
+    transform: scale(0.54);
+}
+
+.about .popup1 .heart {
     top: 60px;
-    right: 18%;
+    right: 19%;
+    width: 82px;
+    height: 82px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
-.about .popup1 img:nth-child(3) {
-    top: 180px;
-    right: 10%;
+.about .popup1 .heart img {
+    transform: scale(0.4);
 }
+
+.about .popup1 .attention {
+    top: 190px;
+    right: 8%;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.about .popup1 .attention img {
+    transform: scale(0.6);
+}
+
 
 .about .popup2 {
     position: absolute;
-    bottom: 40px;
-    left: 120px;
+    bottom: 70px;
+    left: 130px;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 260px;
+    height: 170px;
 }
-.about .popup2 img {}
+.about .popup2 img {
+    transform: scale(0.6);
+}
 
 
 
@@ -411,7 +468,7 @@ section article {
 
 .right_txt {
     position: absolute;
-    right: 15%;
+    right: 16%;
     top: 40%;
     margin-top: 10px;
     
@@ -1003,9 +1060,12 @@ section article {
     margin-left: -20px;
     margin-top: -20px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .playlist .date .emoji01 img {
-    transform: scale(0.4) translate(-120px, -115px);
+    transform: scale(0.4);
 }
 
 .playlist .date .emoji02 {
@@ -1017,9 +1077,12 @@ section article {
     margin-top: -20px;
     margin-right: -30px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .playlist .date .emoji02 img {
-    transform: scale(0.4) translate(-120px, -115px);
+    transform: scale(0.4);
 }
 
 .playlist .date .emoji03 {
@@ -1031,9 +1094,12 @@ section article {
     margin-left: -20px;
     margin-bottom: -20px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .playlist .date .emoji03 img {
-    transform: scale(0.4) translate(-120px, -115px);
+    transform: scale(0.4);
 }
 
 @keyframes ani6 {
@@ -1101,11 +1167,24 @@ section article {
     position: relative;
     width: 100%;
     height: 35%;
-    text-align: center;
     padding-top: 90px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.group .title img {}
+
+.group .title .image {
+    width: 465px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.group .title .image img {
+    transform: scale(0.54);
+}
 .group .title .click {
     position: absolute;
     width: 240px;
@@ -1120,8 +1199,8 @@ section article {
     transform: scale(1) rotate(12.55deg);
     padding: 5px;
     box-sizing: border-box;
-    left: 58%;
-    top: 150px;
+    left: 57%;
+    top: 160px;
     animation: ani5 1.5s infinite;
 }
 
@@ -1305,11 +1384,15 @@ section article {
     width: 250px;
     height: 200px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rebeccapurple;
 }
 
 
 .photo .thumb ul li div img {
-    transform: scale(0.2) translate(-200% , -200%);
+    transform: scale(0.2);
 }
 
 
@@ -1322,50 +1405,49 @@ section article {
 
 
 /* 썸네일 이미지 위치 설정 */
+.photo .thumb ul li:nth-child(1) div img {
+    transform: scale(0.2) translate(-20px, 300px);
+}
 .photo .thumb ul li:nth-child(2) div img {
-    transform: scale(0.2) translate(-200% , -215%);
+    transform: scale(0.2) translate(80px, -50px);
 }
 
 .photo .thumb ul li:nth-child(3) div img {
-    transform: scale(0.1) translate(-455% , -460%);
+    transform: scale(0.1) translate(0, 600px);
 }
 
 .photo .thumb ul li:nth-child(4) div img {
-    transform: scale(0.3) translate(-130% , -125%);
+    transform: scale(0.3) translate(0, 300px);
+}
+.photo .thumb ul li:nth-child(5) div img {
+    transform: scale(0.2) translate(50px, 300px);
 }
 
-
 .photo .thumb ul li:nth-child(6) div img {
-    transform: scale(0.15) translate(-290% , -295%);
+    transform: scale(0.15) translate(0, 400px)
 }
 
 .photo .thumb ul li:nth-child(7) div img {
-    transform: scale(0.1) translate(-455% , -455%);
+    transform: scale(0.1) translate(100px, 300px);
 }
 .photo .thumb ul li:nth-child(8) div img {
-    transform: scale(0.3) translate(-135% , -120%);
+    transform: scale(0.3) translate(-50px, 250px);
 }
 
- .photo .thumb ul li:nth-child(9) div img {
-    transform: scale(0.2) translate(-205% , -220%);
-}
 .photo .thumb ul li:nth-child(10) div img {
-    transform: scale(0.3) translate(-125% , -135%);
+    transform: scale(0.3) translate(0, 100px);
 }
 
-.photo .thumb ul li:nth-child(11) div img {
-    transform: scale(0.2) translate(-205% , -220%);
-}
 .photo .thumb ul li:nth-child(12) div img {
-    transform: scale(0.2) translate(-205% , -210%);
+    transform: scale(0.2) translate(0, 200px);
 }
 
 .photo .thumb ul li:nth-child(13) div img {
-    transform: scale(0.3) translate(-130% , -130%);
+    transform: scale(0.3) translate(0, 100px);
 }
 
 .photo .thumb ul li:nth-child(14) div img {
-    transform: scale(0.2) translate(-220% , -210%);
+    transform: scale(0.2) translate(0, 700px);
 }
 
 
@@ -1416,11 +1498,14 @@ section article {
     border-left: 2px solid #1D2635;
 }
 .popup1_pic .img img {
-    transform: scale(0.4) translate(-75%, -79%);
+    transform: scale(0.4);
 }
 .popup1_pic .img {
     width: 100%;
     height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     background-color: red;
 }
@@ -1526,7 +1611,7 @@ section article {
     position: absolute;
     top: calc(100vh * 3.1);
     left: 50%;
-    width: 510px;
+    width: 600px;
     height: 430px;
     border: solid 2px #1D2635;
     display: none;
@@ -1561,20 +1646,84 @@ section article {
     border-left: 2px solid #1D2635;
 }
 .popup2_pic .img img {
-    transform: scale(0.15) translate(-292%, -285%);
+    transform: scale(0.15);
 }
 .popup2_pic .img {
     width: 100%;
     height: 393px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
+
+
+
+
+.popup2_1_pic {
+    position: absolute;
+    top: calc(100vh * 3.5);
+    left: 60%;
+    width: 550px;
+    height: 400px;
+    border: solid 2px #1D2635;
+    display: none;
+    overflow: hidden;
+}
+.popup2_1_pic .close {
+    background-color: #61A3FF;
+    border-bottom: 2px solid #1D2635;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 35px;
+}
+.popup2_1_pic .close p {
+    font-family: "Black Han Sans", sans-serif;
+    color:  #F6F9FF;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-left: 10px;
+}
+.popup2_1_pic .close span {
+    background-color: #FF6161;
+    color: #1D2635;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 5px 10px;
+    line-height: 1.3;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 35px;
+    border-left: 2px solid #1D2635;
+}
+.popup2_1_pic .img img {
+    transform: scale(0.25) translate(0, -50px);
+}
+.popup2_1_pic .img {
+    width: 100%;
+    height: 393px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
 
 .popup2_text {
     position: absolute;
     top: calc(100vh * 3.4);
     left: 350px;
     width: 540px;
-    height: 330px;
+    height: 455px;
     background-color: #F6F9FF;
     border: 2px solid #1D2635;
     display: none;
@@ -1630,6 +1779,7 @@ section article {
     margin-bottom: 30px;
     display: block;
 }
+
 .popup2_text .txtBox span {
     margin: 0 auto;
     border-top: 1px solid #1D2635;
@@ -1639,8 +1789,18 @@ section article {
     padding: 5px;
 }
 
+.popup2_text .txtBox span.boss {
+    margin-top: 10px;
+}
+.popup2_text .txtBox span.jeans {
+    margin-top: 10px;
+}
+
+
+
 .popup2_text .txtBox span:hover a {
     border: 2px dashed #1D2635;
+    width: 365px;
 }
 
 .popup2_text .txtBox span a {
@@ -1666,12 +1826,20 @@ section article {
 
 
 
+
+
+
+
+
+
+
+
 /* 슈퍼엠 */
 .popup3_pic {
     position: absolute;
     top: calc(100vh * 3.3);
     left: 50%;
-    width: 510px;
+    width: 600px;
     height: 430px;
     border: solid 2px #1D2635;
     display: none;
@@ -1706,12 +1874,15 @@ section article {
     border-left: 2px solid #1D2635;
 }
 .popup3_pic .img img {
-    transform: scale(0.15) translate(-292%, -285%);
+    transform: scale(0.15);
 }
 .popup3_pic .img {
     width: 100%;
     height: 393px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .popup3_text {
@@ -1815,7 +1986,7 @@ section article {
     position: absolute;
     top: calc(100vh * 3.4);
     left: 50%;
-    width: 550px;
+    width: 600px;
     height: 430px;
     border: solid 2px #1D2635;
     display: none;
@@ -1850,11 +2021,14 @@ section article {
     border-left: 2px solid #1D2635;
 }
 .popup4_pic .img img {
-    transform: scale(0.298) translate(-122%, -118%);
+    transform: scale(0.3);
 }
 .popup4_pic .img {
     width: 100%;
     height: 393px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     
 }
@@ -1962,8 +2136,8 @@ section article {
     position: absolute;
     top: calc(100vh * 3.1);
     left: 50%;
-    width: 550px;
-    height: 430px;
+    width: 600px;
+    height: 500px;
     border: solid 2px #1D2635;
     display: none;
 }
@@ -1997,12 +2171,15 @@ section article {
     border-left: 2px solid #1D2635;
 }
 .popup5_pic .img img {
-    transform: scale(0.2) translate(-205%, -201%);
+    transform: scale(0.24);
 }
 .popup5_pic .img {
     width: 100%;
-    height: 393px;
+    height: 463px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 

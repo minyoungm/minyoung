@@ -197,15 +197,24 @@ $(document).ready(function () {
     $('.group .above ul li').eq(1).click(function () {
         $('.popup2_pic').show()
         $('.popup2_text').show()
+        $('.popup2_1_pic').show()
+
 
     })
 
     $('.popup2_pic .close span').click(function () {
         $('.popup2_pic').hide()
+        $('.popup2_1_pic').hide()
+        $('.popup2_text').hide()
+    })
+    $('.popup2_1_pic .close span').click(function () {
+        $('.popup2_pic').hide()
+        $('.popup2_1_pic').hide()
         $('.popup2_text').hide()
     })
     $('.popup2_text .close span').click(function () {
         $('.popup2_pic').hide()
+        $('.popup2_1_pic').hide()
         $('.popup2_text').hide()
     })
 
