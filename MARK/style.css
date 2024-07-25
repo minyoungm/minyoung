@@ -116,6 +116,10 @@ section article {
     top: 0;
     left: 0;
     opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
    
 }
 
@@ -128,10 +132,14 @@ section article {
     top: 80px;
     left: 10%;
     animation-delay: 0;
+    width: 210px;
+    height: 190px;
 }
 .main .imgBox li:nth-child(2) {
     top: 120px;
     left: 32%;
+    width: 225px;
+    height: 210px;
     animation-delay: 2s;
 
 }
@@ -139,41 +147,57 @@ section article {
     top: 100px;
     left: 55%;
     animation-delay: 0.5s;
+    width: 270px;
+    height: 165px;
 }
 .main .imgBox li:nth-child(4) {
     top: 120px;
     left: 80%;
     animation-delay: 1.2s;
+    width: 190px;
+    height: 175px;
 }
 .main .imgBox li:nth-child(5) {
     left: 75%;
     top: 55%;
     animation-delay: 2s;
+    width: 280pxpx;
+    height: 275px;
 }
 .main .imgBox li:nth-child(6) {
     left: 68%;
     top: 33%;
     animation-delay: 1.2s;
+    width: 220px;
+    height: 280px;
 }
 .main .imgBox li:nth-child(7) {
     top: 35%;
     left: 16%;
     animation-delay: 0.5s;
+    width: 190px;
+    height: 225px;
 }
 .main .imgBox li:nth-child(8) {
     top: 65%;
     left: 150px;
     animation-delay: 1.2s;
+    width: 165px;
+    height: 180px;
 }
 .main .imgBox li:nth-child(9) {
     top: 70%;
     left: 25%;
     animation-delay: 0;
+    width: 405px;
+    height: 235px;
 }
 .main .imgBox li:nth-child(10) {
     top: 76%;
     left: 54%;
     animation-delay: 2s;
+    width: 325px;
+    height: 135px;
 }
 
 
@@ -217,10 +241,17 @@ section article {
     position: absolute;
     left: 50%;
     top: 23%;
-    margin-left: -160px;
+    margin-left: -125px;
     z-index: 2;
+    width: 350px;
+    height: 630px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.about .iphone .frame img {}
+.about .iphone .frame img {
+    transform: scale(0.218);
+}
 
 .about .iphone .vid {
     position: absolute;
@@ -228,14 +259,16 @@ section article {
     left: 50%;
     top: 23%;
     overflow: hidden;
-    margin-left: -150px;
+    margin-left: -120px;
     border-radius: 55px;
-    width: 328px;
+    width: 338px;
     height: 630px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .about .iphone .vid video {
-    width: 345px;
-    height: 630px;
+    transform: scale(0.32);
 }
 
 
@@ -300,6 +333,8 @@ section article {
 }
 
 
+
+
 /* 애니메이션 설정 */
 @keyframes ani1 {
     0% {
@@ -340,6 +375,45 @@ section article {
 
 
 
+/* 호버 안내문구 설정 */
+.about .hover {
+    width: 300px;
+    height: 50px;
+    background-color: #F6F9FF;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px solid #A0A7B4;
+    position: absolute;
+    top: 15%;
+    left: 38%;
+
+}
+
+.about .hover p {
+    font-family: "Noto Sans KR", sans-serif;
+    color: #1D2635;
+    font-size: 18px;
+    width: 80%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.about .hover span {
+    width: 10%;
+    height: 30px;
+    background-color: #2E9DFB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-left: -20px;
+}
+.about .hover span i {
+    color: #F6F9FF;
+    font-size: 20px;
+}
 
 /* 팝업 이미지 설정 */
 .about .popup1 {}
@@ -356,6 +430,7 @@ section article {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    opacity: 0;
 }
 .about .popup1 .reminder img {
     transform: scale(0.54);
@@ -370,6 +445,7 @@ section article {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    opacity: 0;
 }
 .about .popup1 .heart img {
     transform: scale(0.4);
@@ -384,22 +460,47 @@ section article {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    opacity: 0;
 }
 .about .popup1 .attention img {
     transform: scale(0.6);
 }
 
+.slideIn1 {
+    animation: slideIn 0.8s forwards;
+}
+.slideIn2 {
+    animation: slideIn2 0.8s forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-30px); opacity: 0;
+    }
+    100% {
+        transform: translateX(0); opacity: 1;
+    }
+}
+@keyframes slideIn2 {
+    0% {
+        transform: translateX(30px); opacity: 0;
+    }
+    100% {
+        transform: translateX(0); opacity: 1;
+    }
+}
 
 .about .popup2 {
     position: absolute;
-    bottom: 70px;
-    left: 130px;
+    bottom: 60px;
+    left: 160px;
     z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 260px;
     height: 170px;
+   opacity: 0;
 }
 .about .popup2 img {
     transform: scale(0.6);
@@ -415,19 +516,29 @@ section article {
     position: absolute;
     left: 20%;
     top: 45%;
-    margin-left: -20px;
+    margin-left: 30px;
 }
 .left_txt ul {}
 .left_txt li {
     opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .left_txt li:nth-child(1) {
     animation-delay: 1s;
+    width: 345px;
+    height: 90px;    
 }
+
 .left_txt li:nth-child(2) {
     animation-delay: 2.5s;
+    width: 345px;
+    height: 180px;
 }
+
 .animate2 {
     animation: txt 0.3s linear forwards;
 }
@@ -442,20 +553,22 @@ section article {
     flex-direction: column;
     position: absolute;
     top: 10px;
-    left: 20px;
+    left: 25px;
+    padding: 5px 0;
 }
 .left_txt li.sns .sns_txt p {
     font-family: "Noto Sans KR", sans-serif;
     color: #fff;
     font-size: 17px;
     letter-spacing: -0.5px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .left_txt li.sns .sns_txt a {
     font-family: "Noto Sans KR", sans-serif;
     color: #fff;
     font-weight: bold;
     font-size: 23px;
+    margin-top: 5px;
 }
 
 .left_txt li.sns .sns_txt a:hover {
@@ -476,18 +589,28 @@ section article {
 .right_txt ul {}
 .right_txt li {
     opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .right_txt li:nth-child(1) {
-    animation-delay: 0.2s;
+    animation-delay: 0.5s;
+    width: 360px;
+    height: 160px;
 }
 .right_txt li:nth-child(2) {
     margin-top: 50px;
     animation-delay: 1.5s;
+    width: 360px;
+    height: 105px;
 }
 .right_txt li:nth-child(3) {
     margin-top: 20px;
     animation-delay: 2s;
+    width: 360px;
+    height: 90px;
 }
 .right_txt img {}
 
@@ -555,6 +678,12 @@ section article {
     right: 15%;
     top: 25%;
     animation: title linear 1s infinite;
+    width: 375px;
+    height: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 .playlist .left_img li:nth-child(1) .chat_img img {}
 
@@ -585,6 +714,12 @@ section article {
     margin-left: 40px;
     top: 10%;
     margin-top: -10px;
+    width: 240px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 
 }
 .playlist .left_img li.child .chat_box .bubble .img {}
@@ -633,6 +768,12 @@ section article {
     position: absolute;
     right: 200px;
     top: 20%;
+    width: 345px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 
 }
 .playlist .left_img li.child .chat_box .chat img {}
@@ -653,15 +794,19 @@ section article {
 
 .playlist .left_img li.child .container .above {
     width: 100%;
-    height: 300px;
+    height: 48%;
     display: flex;
     align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
+    justify-content: center;
+    margin-top: 10px;
+
 }
 .playlist .left_img li.child .container .above .cover {
     width: 50%;
-    text-align: center;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .playlist .left_img li.child .container .above .cover img {}
 .playlist .left_img li.child .container .above .music {
@@ -682,7 +827,7 @@ section article {
 .playlist .left_img li.child .container .above .music span {
     font-family: "Noto Sans KR", sans-serif;
     color: #787D85;
-    font-size: 16px;
+    font-size: 15px;
 }
 .playlist .left_img li.child .container .above .music p {
     font-family: "Noto Sans KR", sans-serif;
@@ -703,7 +848,11 @@ section article {
 }
 
 .playlist .left_img li.child .container .under {
-    padding: 10px 40px;
+    padding: 0px 40px;
+    height: 38%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .playlist .left_img li.child .container .under p {
     font-family: "Noto Sans KR", sans-serif;
@@ -747,6 +896,12 @@ section article {
     margin-left: 40px;
     top: 10%;
     margin-top: -10px;
+    width: 240px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 .playlist .left_img li.gh .chat_box .bubble .img {}
 
@@ -793,7 +948,14 @@ section article {
 .playlist .left_img li.gh .chat_box .chat {
     position: absolute;
     right: 200px;
-    top: 20%;
+    top: 19%;
+    width: 345px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
 }
 .playlist .left_img li.gh .chat_box .chat img {}
 
@@ -811,15 +973,18 @@ section article {
 
 .playlist .left_img li.gh .container .above {
     width: 100%;
-    height: 300px;
+    height: 48%;
     display: flex;
     align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
+    justify-content: center;
+    margin-top: 10px;
 }
 .playlist .left_img li.gh .container .above .cover {
     width: 50%;
-    text-align: center;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .playlist .left_img li.gh .container .above .cover img {}
 .playlist .left_img li.gh .container .above .music {
@@ -840,7 +1005,7 @@ section article {
 .playlist .left_img li.gh .container .above .music span {
     font-family: "Noto Sans KR", sans-serif;
     color: #787D85;
-    font-size: 16px;
+    font-size: 15px;
 }
 .playlist .left_img li.gh .container .above .music p {
     font-family: "Noto Sans KR", sans-serif;
@@ -860,9 +1025,12 @@ section article {
 }
 
 .playlist .left_img li.gh .container .under {
-    padding: 20px 40px;
-    margin-top: -35px;
 
+    padding: 15px 40px;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .playlist .left_img li.gh .container .under p {
     font-family: "Noto Sans KR", sans-serif;
@@ -896,6 +1064,12 @@ section article {
     margin-left: 40px;
     top: 10%;
     margin-top: -10px;
+    width: 240px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 .playlist .left_img li.two .chat_box .bubble .img {}
 
@@ -943,6 +1117,12 @@ section article {
     position: absolute;
     right: 200px;
     top: 20%;
+    width: 345px;
+    height: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 .playlist .left_img li.two .chat_box .chat img {}
 
@@ -960,15 +1140,20 @@ section article {
 
 .playlist .left_img li.two .container .above {
     width: 100%;
-    height: 300px;
+    height: 48%;
     display: flex;
     align-items: center;
-    padding: 20px;
-    box-sizing: border-box;
+    justify-content: center;
+    margin-top: 10px;
 }
+
+
 .playlist .left_img li.two .container .above .cover {
     width: 50%;
-    text-align: center;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .playlist .left_img li.two .container .above .cover img {}
 .playlist .left_img li.two .container .above .music {
@@ -989,7 +1174,7 @@ section article {
 .playlist .left_img li.two .container .above .music span {
     font-family: "Noto Sans KR", sans-serif;
     color: #787D85;
-    font-size: 16px;
+    font-size: 15px;
 }
 .playlist .left_img li.two .container .above .music p {
     font-family: "Noto Sans KR", sans-serif;
@@ -1009,7 +1194,11 @@ section article {
 
 .playlist .left_img li.two .container .under {
     padding: 20px 40px;
-    margin-top: -50px;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .playlist .left_img li.two .container .under p {
     font-family: "Noto Sans KR", sans-serif;
@@ -1246,7 +1435,27 @@ section article {
 .group .above li {
     cursor: pointer;
     padding: 20px;
+    opacity: 0;
 }
+
+.group .above li:nth-child(1) {
+    animation-delay: 0.3s;
+}
+.group .above li:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.group .above li:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.group .under li:nth-child(1) {
+    animation-delay: 0.4s;
+}
+.group .under li:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+
 .group .above li img {}
 
 
@@ -1266,6 +1475,7 @@ section article {
 .group .under li {
     cursor: pointer;
     padding: 20px;
+    opacity: 0;
 }
 .group .under li img {}
 

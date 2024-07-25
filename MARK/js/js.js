@@ -113,7 +113,16 @@ $(document).ready(function () {
          if(sc >= ht) {
             $('.about .left_txt li').addClass('animate2')
             $('.about .right_txt li').addClass('animate2')
+            $('.about .popup1 .attention').addClass('slideIn2')
+            $('.about .popup1 .heart').addClass('slideIn2')
+            $('.about .popup1 .reminder').addClass('slideIn2')
+            $('.about .popup2').addClass('slideIn1')
          }
+
+         if(sc >= ht * 3){
+            $('.group .above li').addClass('animate2')
+            $('.group .under li').addClass('animate2')
+        }
      })
 
     var sc = $(window).scrollTop()
@@ -126,9 +135,27 @@ $(document).ready(function () {
     var ht = $('article').height()
     if(sc >= ht) {
         $('.about .left_txt li').addClass('animate2')
-        $('.anout .right_txt li').addClass('animate2')
+        $('.about .right_txt li').addClass('animate2')
+        $('.about .popup1 .attention').addClass('slideIn2')
+        $('.about .popup1 .heart').addClass('slideIn2')
+        $('.about .popup1 .reminder').addClass('slideIn2')
+        $('.about .popup2').addClass('slideIn1')
     }
-  
+
+    // about 동영상 설정
+    // 마우스가 frame 안에 들어갔을 때 video pause/ 나갔을 때 play
+        $('.about .iphone .frame').mouseenter(function(){
+            $('.about .iphone .vid video').get(0).pause();
+        });
+        $('.about .iphone .frame').mouseleave(function(){
+            $('.about .iphone .vid video').get(0).play();
+        });
+    
+    // group 페이지로 넘어왔을 때 애니메이션 작동하기
+    if(sc >= ht * 3){
+        $('.group .above li').addClass('animation2')
+        $('.group .under li').addClass('animation2')
+    }
 
 
 
