@@ -723,6 +723,7 @@ section article {
     overflow: hidden;
     animation-delay: 0.8s;
     opacity: 0;
+    z-index: 10;
 
 }
 .playlist .left_img .child .chat_box .bubble .img {}
@@ -766,7 +767,7 @@ section article {
 
 .playlist .left_img .child .chat_box .bubble .youtube {
     position: absolute;
-    z-index: 10;
+    
     top: 18px;
     right: 30px;
 }
@@ -780,11 +781,9 @@ section article {
     color: #1D2635;
     font-size: 16px;
     font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
 }
 
-.playlist .left_img .child .chat_box .bubble .youtube a:hover {
-    text-decoration: underline;
-}
 
 .playlist .left_img .child .chat_box .chat {
     position: absolute;
@@ -928,6 +927,7 @@ section article {
     overflow: hidden;
     animation-delay: 0.8s;
     opacity: 0;
+    z-index: 10;
 }
 .playlist .left_img .gh .chat_box .bubble .img {}
 
@@ -955,7 +955,7 @@ section article {
 
 .playlist .left_img .gh .chat_box .bubble .youtube {
     position: absolute;
-    z-index: 10;
+    
     top: 18px;
     right: 30px;
 }
@@ -969,11 +969,9 @@ section article {
     color: #1D2635;
     font-size: 16px;
     font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
 }
 
-.playlist .left_img .gh .chat_box .bubble .youtube a:hover {
-    text-decoration: underline;
-}
 
 .playlist .left_img .gh .chat_box .chat {
     position: absolute;
@@ -1104,6 +1102,7 @@ section article {
     overflow: hidden;
     animation-delay: 0.8s;
     opacity: 0;
+    z-index: 10;
 }
 .playlist .left_img .two .chat_box .bubble .img {}
 
@@ -1128,10 +1127,9 @@ section article {
 }
 
 
-
 .playlist .left_img .two .chat_box .bubble .youtube {
     position: absolute;
-    z-index: 10;
+    
     top: 18px;
     right: 30px;
 }
@@ -1145,11 +1143,11 @@ section article {
     color: #1D2635;
     font-size: 16px;
     font-family: "Noto Sans KR", sans-serif;
+    font-weight: bold;
 }
 
-.playlist .left_img .two .chat_box .bubble .youtube a:hover {
-    text-decoration: underline;
-}
+
+
 
 .playlist .left_img .two .chat_box .chat {
     position: absolute;
@@ -1166,6 +1164,26 @@ section article {
 }
 .playlist .left_img .two .chat_box .chat img {}
 
+
+/* 호버효과 */
+.playlist .left_img .child .chat_box .bubble:hover .heart i {
+    animation-play-state: paused;
+}
+.playlist .left_img .gh .chat_box .bubble:hover .heart i {
+    animation-play-state: paused;
+}
+.playlist .left_img .two .chat_box .bubble:hover .heart i {
+    animation-play-state: paused;
+}
+.playlist .left_img .child .chat_box .bubble:hover .youtube a {
+    text-decoration: underline;
+}
+.playlist .left_img .gh .chat_box .bubble:hover .youtube a {
+    text-decoration: underline;
+}
+.playlist .left_img .two .chat_box .bubble:hover .youtube a {
+    text-decoration: underline;
+}
 
 
 
@@ -1225,6 +1243,7 @@ section article {
     text-align: center;
     margin-top: 30px;
     cursor: pointer;
+    z-index: 10;
 }
 .playlist .left_img .two .container .above .music .player i {
     font-size: 30px;
