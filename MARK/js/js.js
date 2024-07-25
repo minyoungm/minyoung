@@ -176,7 +176,18 @@ $(document).ready(function () {
         $('.playlist .date div').removeClass('on')
         $('.playlist .date div').eq(a).addClass('on')
 
+        
+        // 클릭한 요소에 해당하는 애니메이션 클래스 추가
+        $('.playlist .left_img li .chat_box .bubble').removeClass('slideIn1');
+        $('.playlist .left_img li .chat_box .chat').removeClass('slideIn2');
+
+        $('.playlist .left_img li').eq(a + 1).find('.chat_box .bubble').addClass('slideIn1');
+        $('.playlist .left_img li').eq(a + 1).find('.chat_box .chat').addClass('slideIn2');
+
+
     })
+
+
 
 
 

@@ -692,8 +692,9 @@ section article {
 
 
 
+
 /* child------- */
-.playlist .left_img li.child {
+.playlist .left_img .child {
     background-image: url(img/playlist/child_bg.jpg);
     background-size: cover;
     background-position: center;
@@ -707,8 +708,8 @@ section article {
 
 
 /* 말풍선 설정 */
-.playlist .left_img li.child .chat_box {}
-.playlist .left_img li.child .chat_box .bubble {
+.playlist .left_img .child .chat_box {}
+.playlist .left_img .child .chat_box .bubble {
     position: absolute;
     left: 15%;
     margin-left: 40px;
@@ -720,12 +721,14 @@ section article {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    animation-delay: 0.8s;
+    opacity: 0;
 
 }
-.playlist .left_img li.child .chat_box .bubble .img {}
+.playlist .left_img .child .chat_box .bubble .img {}
 
 
-.playlist .left_img li.child .chat_box .bubble .heart {
+.playlist .left_img .child .chat_box .bubble .heart {
     position: absolute;
     top: 8px;
     left: 10px;
@@ -735,36 +738,55 @@ section article {
     border-radius: 50%;
     text-align: center;
 }
-.playlist .left_img li.child .chat_box .bubble .heart i {
+.playlist .left_img .child .chat_box .bubble .heart i {
     font-size: 30px;
     color: #F76190;
     line-height: 1.7;
+    animation: pulse 0.7s infinite;
+    transform: scale(0.8);
 }
 
 
-.playlist .left_img li.child .chat_box .bubble .youtube {
+/* 하트 키프레임 */
+@keyframes pulse {
+    0% {
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(0.8);
+    }
+  }
+  
+
+
+
+
+.playlist .left_img .child .chat_box .bubble .youtube {
     position: absolute;
     z-index: 10;
     top: 18px;
     right: 30px;
 }
-.playlist .left_img li.child .chat_box .bubble .youtube a i {
+.playlist .left_img .child .chat_box .bubble .youtube a i {
     font-size: 30px;
     color: #FF0000;
     padding-right: 10px;
     vertical-align: middle;
 }
-.playlist .left_img li.child .chat_box .bubble .youtube a {
+.playlist .left_img .child .chat_box .bubble .youtube a {
     color: #1D2635;
     font-size: 16px;
     font-family: "Noto Sans KR", sans-serif;
 }
 
-.playlist .left_img li.child .chat_box .bubble .youtube a:hover {
+.playlist .left_img .child .chat_box .bubble .youtube a:hover {
     text-decoration: underline;
 }
 
-.playlist .left_img li.child .chat_box .chat {
+.playlist .left_img .child .chat_box .chat {
     position: absolute;
     right: 200px;
     top: 20%;
@@ -774,9 +796,11 @@ section article {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    animation-delay: 0.5s;
+    opacity: 0;
 
 }
-.playlist .left_img li.child .chat_box .chat img {}
+.playlist .left_img .child .chat_box .chat img {}
 
 
 
@@ -784,7 +808,7 @@ section article {
 
 
 /* 플레이어 설정 */
-.playlist .left_img li.child .container {
+.playlist .left_img .child .container {
     width: 535px;
     height: 500px;
     background-color: rgba(248, 254, 255, 0.8);
@@ -792,7 +816,7 @@ section article {
     margin-top: 150px;
 }
 
-.playlist .left_img li.child .container .above {
+.playlist .left_img .child .container .above {
     width: 100%;
     height: 48%;
     display: flex;
@@ -801,15 +825,15 @@ section article {
     margin-top: 10px;
 
 }
-.playlist .left_img li.child .container .above .cover {
+.playlist .left_img .child .container .above .cover {
     width: 50%;
     height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.playlist .left_img li.child .container .above .cover img {}
-.playlist .left_img li.child .container .above .music {
+.playlist .left_img .child .container .above .cover img {}
+.playlist .left_img .child .container .above .music {
     width: 50%;
     height: 300px;
     line-height: 1.8;
@@ -818,48 +842,48 @@ section article {
     flex-direction: column;
 }
 
-.playlist .left_img li.child .container .above .music h3 {
+.playlist .left_img .child .container .above .music h3 {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 20px;
     letter-spacing: 2px;
     color: #1D2635;
 }
-.playlist .left_img li.child .container .above .music span {
+.playlist .left_img .child .container .above .music span {
     font-family: "Noto Sans KR", sans-serif;
     color: #787D85;
     font-size: 15px;
 }
-.playlist .left_img li.child .container .above .music p {
+.playlist .left_img .child .container .above .music p {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 16px;
     color: #42464B;
 }
-.playlist .left_img li.child .container .above .music .player {
+.playlist .left_img .child .container .above .music .player {
     text-align: center;
     margin-top: 30px;
     cursor: pointer;
     z-index: 10;
 
 }
-.playlist .left_img li.child .container .above .music .player i {
+.playlist .left_img .child .container .above .music .player i {
     font-size: 30px;
     color: #1D2635;
     padding: 10px 20px;
 }
 
-.playlist .left_img li.child .container .under {
+.playlist .left_img .child .container .under {
     padding: 0px 40px;
     height: 38%;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-.playlist .left_img li.child .container .under p {
+.playlist .left_img .child .container .under p {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 16px;
     color: #1D2635;
 }
-.playlist .left_img li.child .container .under p:nth-child(2) {
+.playlist .left_img .child .container .under p:nth-child(2) {
     margin-top: 10px;
 }
 
@@ -875,7 +899,7 @@ section article {
 
 
 /* 골든아워-------- */
-.playlist .left_img li.gh {
+.playlist .left_img .gh {
     background-image: url(img/playlist/gh_bg.jpg);
     background-size: cover;
     background-position: bottom center;
@@ -889,8 +913,8 @@ section article {
 
 
 /* 말풍선 설정 */
-.playlist .left_img li.gh .chat_box {}
-.playlist .left_img li.gh .chat_box .bubble {
+.playlist .left_img .gh .chat_box {}
+.playlist .left_img .gh .chat_box .bubble {
     position: absolute;
     left: 15%;
     margin-left: 40px;
@@ -902,11 +926,13 @@ section article {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    animation-delay: 0.8s;
+    opacity: 0;
 }
-.playlist .left_img li.gh .chat_box .bubble .img {}
+.playlist .left_img .gh .chat_box .bubble .img {}
 
 
-.playlist .left_img li.gh .chat_box .bubble .heart {
+.playlist .left_img .gh .chat_box .bubble .heart {
     position: absolute;
     top: 8px;
     left: 10px;
@@ -915,37 +941,41 @@ section article {
     height: 50px;
     border-radius: 50%;
     text-align: center;
+
 }
-.playlist .left_img li.gh .chat_box .bubble .heart i {
+.playlist .left_img .gh .chat_box .bubble .heart i {
     font-size: 30px;
     color: #F76190;
     line-height: 1.7;
+    animation: pulse 0.7s infinite;
+    transform: scale(0.8);
 }
 
 
-.playlist .left_img li.gh .chat_box .bubble .youtube {
+
+.playlist .left_img .gh .chat_box .bubble .youtube {
     position: absolute;
     z-index: 10;
     top: 18px;
     right: 30px;
 }
-.playlist .left_img li.gh .chat_box .bubble .youtube a i {
+.playlist .left_img .gh .chat_box .bubble .youtube a i {
     font-size: 30px;
     color: #FF0000;
     padding-right: 10px;
     vertical-align: middle;
 }
-.playlist .left_img li.gh .chat_box .bubble .youtube a {
+.playlist .left_img .gh .chat_box .bubble .youtube a {
     color: #1D2635;
     font-size: 16px;
     font-family: "Noto Sans KR", sans-serif;
 }
 
-.playlist .left_img li.gh .chat_box .bubble .youtube a:hover {
+.playlist .left_img .gh .chat_box .bubble .youtube a:hover {
     text-decoration: underline;
 }
 
-.playlist .left_img li.gh .chat_box .chat {
+.playlist .left_img .gh .chat_box .chat {
     position: absolute;
     right: 200px;
     top: 19%;
@@ -955,15 +985,17 @@ section article {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    animation-delay: 0.5s;
+    opacity: 0;
 
 }
-.playlist .left_img li.gh .chat_box .chat img {}
+.playlist .left_img .gh .chat_box .chat img {}
 
 
 
 
 /* 플레이어 설정 */
-.playlist .left_img li.gh .container {
+.playlist .left_img .gh .container {
     width: 535px;
     height: 500px;
     background-color: rgba(248, 254, 255, 0.8);
@@ -971,7 +1003,7 @@ section article {
     margin-top: 150px;
 }
 
-.playlist .left_img li.gh .container .above {
+.playlist .left_img .gh .container .above {
     width: 100%;
     height: 48%;
     display: flex;
@@ -979,15 +1011,15 @@ section article {
     justify-content: center;
     margin-top: 10px;
 }
-.playlist .left_img li.gh .container .above .cover {
+.playlist .left_img .gh .container .above .cover {
     width: 50%;
     height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.playlist .left_img li.gh .container .above .cover img {}
-.playlist .left_img li.gh .container .above .music {
+.playlist .left_img .gh .container .above .cover img {}
+.playlist .left_img .gh .container .above .music {
     width: 50%;
     height: 300px;
     line-height: 1.8;
@@ -996,35 +1028,35 @@ section article {
     flex-direction: column;
 }
 
-.playlist .left_img li.gh .container .above .music h3 {
+.playlist .left_img .gh .container .above .music h3 {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 20px;
     letter-spacing: 2px;
     color: #1D2635;
 }
-.playlist .left_img li.gh .container .above .music span {
+.playlist .left_img .gh .container .above .music span {
     font-family: "Noto Sans KR", sans-serif;
     color: #787D85;
     font-size: 15px;
 }
-.playlist .left_img li.gh .container .above .music p {
+.playlist .left_img .gh .container .above .music p {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 16px;
     color: #42464B;
 }
-.playlist .left_img li.gh .container .above .music .player {
+.playlist .left_img .gh .container .above .music .player {
     text-align: center;
     margin-top: 30px;
     cursor: pointer;
     z-index: 10;
 }
-.playlist .left_img li.gh .container .above .music .player i {
+.playlist .left_img .gh .container .above .music .player i {
     font-size: 30px;
     color: #1D2635;
     padding: 10px 20px;
 }
 
-.playlist .left_img li.gh .container .under {
+.playlist .left_img .gh .container .under {
 
     padding: 15px 40px;
     height: 35%;
@@ -1032,19 +1064,19 @@ section article {
     justify-content: center;
     flex-direction: column;
 }
-.playlist .left_img li.gh .container .under p {
+.playlist .left_img .gh .container .under p {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 16px;
     color: #1D2635;
 }
-.playlist .left_img li.gh .container .under p:nth-child(2) {
+.playlist .left_img .gh .container .under p:nth-child(2) {
     margin-top: 10px;
 }
 
 
 
 /* 200------------- */
-.playlist .left_img li.two {
+.playlist .left_img .two {
     background-image: url(img/playlist/200_bg.jpg);
     background-size: cover;
     background-position: center;
@@ -1057,8 +1089,8 @@ section article {
 
 
 /* 말풍선 설정 */
-.playlist .left_img li.two .chat_box {}
-.playlist .left_img li.two .chat_box .bubble {
+.playlist .left_img .two .chat_box {}
+.playlist .left_img .two .chat_box .bubble {
     position: absolute;
     left: 15%;
     margin-left: 40px;
@@ -1070,11 +1102,13 @@ section article {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    animation-delay: 0.8s;
+    opacity: 0;
 }
-.playlist .left_img li.two .chat_box .bubble .img {}
+.playlist .left_img .two .chat_box .bubble .img {}
 
 
-.playlist .left_img li.two .chat_box .bubble .heart {
+.playlist .left_img .two .chat_box .bubble .heart {
     position: absolute;
     top: 8px;
     left: 10px;
@@ -1083,37 +1117,41 @@ section article {
     height: 50px;
     border-radius: 50%;
     text-align: center;
+
 }
-.playlist .left_img li.two .chat_box .bubble .heart i {
+.playlist .left_img .two .chat_box .bubble .heart i {
     font-size: 30px;
     color: #F76190;
     line-height: 1.7;
+    animation: pulse 0.7s infinite;
+    transform: scale(0.8);
 }
 
 
-.playlist .left_img li.two .chat_box .bubble .youtube {
+
+.playlist .left_img .two .chat_box .bubble .youtube {
     position: absolute;
     z-index: 10;
     top: 18px;
     right: 30px;
 }
-.playlist .left_img li.two .chat_box .bubble .youtube a i {
+.playlist .left_img .two .chat_box .bubble .youtube a i {
     font-size: 30px;
     color: #FF0000;
     padding-right: 10px;
     vertical-align: middle;
 }
-.playlist .left_img li.two .chat_box .bubble .youtube a {
+.playlist .left_img .two .chat_box .bubble .youtube a {
     color: #1D2635;
     font-size: 16px;
     font-family: "Noto Sans KR", sans-serif;
 }
 
-.playlist .left_img li.two .chat_box .bubble .youtube a:hover {
+.playlist .left_img .two .chat_box .bubble .youtube a:hover {
     text-decoration: underline;
 }
 
-.playlist .left_img li.two .chat_box .chat {
+.playlist .left_img .two .chat_box .chat {
     position: absolute;
     right: 200px;
     top: 20%;
@@ -1123,14 +1161,16 @@ section article {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    animation-delay: 0.5s;
+    opacity: 0;
 }
-.playlist .left_img li.two .chat_box .chat img {}
+.playlist .left_img .two .chat_box .chat img {}
 
 
 
 
 /* 플레이어 설정 */
-.playlist .left_img li.two .container {
+.playlist .left_img .two .container {
     width: 535px;
     height: 500px;
     background-color: rgba(248, 254, 255, 0.8);
@@ -1138,7 +1178,7 @@ section article {
     margin-top: 150px;
 }
 
-.playlist .left_img li.two .container .above {
+.playlist .left_img .two .container .above {
     width: 100%;
     height: 48%;
     display: flex;
@@ -1148,15 +1188,15 @@ section article {
 }
 
 
-.playlist .left_img li.two .container .above .cover {
+.playlist .left_img .two .container .above .cover {
     width: 50%;
     height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.playlist .left_img li.two .container .above .cover img {}
-.playlist .left_img li.two .container .above .music {
+.playlist .left_img .two .container .above .cover img {}
+.playlist .left_img .two .container .above .music {
     width: 50%;
     height: 300px;
     line-height: 1.8;
@@ -1165,34 +1205,34 @@ section article {
     flex-direction: column;
 }
 
-.playlist .left_img li.two .container .above .music h3 {
+.playlist .left_img .two .container .above .music h3 {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 20px;
     letter-spacing: 2px;
     color: #1D2635;
 }
-.playlist .left_img li.two .container .above .music span {
+.playlist .left_img .two .container .above .music span {
     font-family: "Noto Sans KR", sans-serif;
     color: #787D85;
     font-size: 15px;
 }
-.playlist .left_img li.two .container .above .music p {
+.playlist .left_img .two .container .above .music p {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 16px;
     color: #42464B;
 }
-.playlist .left_img li.two .container .above .music .player {
+.playlist .left_img .two .container .above .music .player {
     text-align: center;
     margin-top: 30px;
     cursor: pointer;
 }
-.playlist .left_img li.two .container .above .music .player i {
+.playlist .left_img .two .container .above .music .player i {
     font-size: 30px;
     color: #1D2635;
     padding: 10px 20px;
 }
 
-.playlist .left_img li.two .container .under {
+.playlist .left_img .two .container .under {
     padding: 20px 40px;
     height: 35%;
     display: flex;
@@ -1200,15 +1240,14 @@ section article {
     align-items: center;
     flex-direction: column;
 }
-.playlist .left_img li.two .container .under p {
+.playlist .left_img .two .container .under p {
     font-family: "Noto Sans KR", sans-serif;
     font-size: 16px;
     color: #1D2635;
 }
-.playlist .left_img li.two .container .under p:nth-child(2) {
+.playlist .left_img .two .container .under p:nth-child(2) {
     margin-top: 10px;
 }
-
 
 
 
