@@ -4,14 +4,13 @@ $(document).ready(function () {
 
     // 브라우저의 높이값을 찾아라
     var winht = $(window).height()
-
+    $('article').height(winht)
     // 화면이 리사이징 될 때마다, 브라우저의 화면높이를 찾아라
     $(window).resize(function () {
         var winht2 = $(window).height()
         $('article').height(winht2)
     })
 
-    $('article').height(winht)
     // console.log(winht)
 
     
@@ -27,7 +26,7 @@ $(document).ready(function () {
         $('nav li').removeClass('on')
         $('nav li').eq(i).addClass('on')
 
-        $('html,body').animate({ 'scrollTop': ht * i }, 1000);
+        $('html,body').stop().animate({ 'scrollTop': ht * i }, 1000);
     })
 
 
@@ -37,6 +36,7 @@ $(document).ready(function () {
     $(window).scroll(function(){
         var sc = $(this).scrollTop()
         var sht = $(window).height()
+        var ht = $('article').height()
         var photoTop = $('.photo').offset().top;
 
         console.log(photoTop - sc)
@@ -64,7 +64,6 @@ $(document).ready(function () {
                  'left' : 0
              });
          }
-
 
 
     
@@ -216,61 +215,61 @@ $(document).ready(function () {
     // 그룹 폴더 팝업 설정
     // .group .above ul li eq(0)을 클릭했을 때, .popup1_pic, .popup1_text가 뜬다.
     $('.group .above ul li').eq(0).click(function () {
-        $('.popup1_pic').show()
-        $('.popup1_text').show()
+        $('.popup1_pic').stop().show()
+        $('.popup1_text').stop().show()
 
     })
 
     $('.popup1_pic .close span').click(function () {
-        $('.popup1_pic').hide()
-        $('.popup1_text').hide()
+        $('.popup1_pic').stop().hide()
+        $('.popup1_text').stop().hide()
     })
     $('.popup1_text .close span').click(function () {
-        $('.popup1_pic').hide()
-        $('.popup1_text').hide()
+        $('.popup1_pic').stop().hide()
+        $('.popup1_text').stop().hide()
     })
 
 
     // nct u 팝업
     $('.group .above ul li').eq(1).click(function () {
-        $('.popup2_pic').show()
-        $('.popup2_text').show()
-        $('.popup2_1_pic').show()
+        $('.popup2_pic').stop().show()
+        $('.popup2_text').stop().show()
+        $('.popup2_1_pic').stop().show()
 
 
     })
 
     $('.popup2_pic .close span').click(function () {
-        $('.popup2_pic').hide()
-        $('.popup2_1_pic').hide()
-        $('.popup2_text').hide()
+        $('.popup2_pic').stop().hide()
+        $('.popup2_1_pic').stop().hide()
+        $('.popup2_text').stop().hide()
     })
     $('.popup2_1_pic .close span').click(function () {
-        $('.popup2_pic').hide()
-        $('.popup2_1_pic').hide()
-        $('.popup2_text').hide()
+        $('.popup2_pic').stop().hide()
+        $('.popup2_1_pic').stop().hide()
+        $('.popup2_text').stop().hide()
     })
     $('.popup2_text .close span').click(function () {
-        $('.popup2_pic').hide()
-        $('.popup2_1_pic').hide()
-        $('.popup2_text').hide()
+        $('.popup2_pic').stop().hide()
+        $('.popup2_1_pic').stop().hide()
+        $('.popup2_text').stop().hide()
     })
 
 
     // 슈퍼엠 팝업
     $('.group .above ul li').eq(2).click(function () {
-        $('.popup3_pic').show()
-        $('.popup3_text').show()
+        $('.popup3_pic').stop().show()
+        $('.popup3_text').stop().show()
 
     })
 
     $('.popup3_pic .close span').click(function () {
-        $('.popup3_pic').hide()
-        $('.popup3_text').hide()
+        $('.popup3_pic').stop().hide()
+        $('.popup3_text').stop().hide()
     })
     $('.popup3_text .close span').click(function () {
-        $('.popup3_pic').hide()
-        $('.popup3_text').hide()
+        $('.popup3_pic').stop().hide()
+        $('.popup3_text').stop().hide()
     })
 
 
@@ -278,36 +277,58 @@ $(document).ready(function () {
 
     // 127 팝업
     $('.group .under ul li').eq(0).click(function () {
-        $('.popup4_pic').show()
-        $('.popup4_text').show()
+        $('.popup4_pic').stop().show()
+        $('.popup4_text').stop().show()
 
     })
 
     $('.popup4_pic .close span').click(function () {
-        $('.popup4_pic').hide()
-        $('.popup4_text').hide()
+        $('.popup4_pic').stop().hide()
+        $('.popup4_text').stop().hide()
     })
     $('.popup4_text .close span').click(function () {
-        $('.popup4_pic').hide()
-        $('.popup4_text').hide()
+        $('.popup4_pic').stop().hide()
+        $('.popup4_text').stop().hide()
     })
 
 
     // 드림 팝업
     $('.group .under ul li').eq(1).click(function () {
-        $('.popup5_pic').show()
-        $('.popup5_text').show()
+        $('.popup5_pic').stop().show()
+        $('.popup5_text').stop().show()
 
     })
 
     $('.popup5_pic .close span').click(function () {
-        $('.popup5_pic').hide()
-        $('.popup5_text').hide()
+        $('.popup5_pic').stop().hide()
+        $('.popup5_text').stop().hide()
     })
     $('.popup5_text .close span').click(function () {
-        $('.popup5_pic').hide()
-        $('.popup5_text').hide()
+        $('.popup5_pic').stop().hide()
+        $('.popup5_text').stop().hide()
     })
+
+
+
+
+    // 스크롤 움직이면 팝업창 사라짐
+    $(window).scroll(function () {
+        var sc = $(window).scrollTop();
+        var ht = $('article').height();
+
+        if (sc >= ht * 4 || sc <= ht * 3) {
+            $('.popup1_pic, .popup1_text, .popup2_pic, .popup2_1_pic, .popup2_text, .popup3_pic, .popup3_text, .popup4_pic, .popup4_text, .popup5_pic, .popup5_text').fadeOut();
+        }
+    });
+
+    // 인트로 설정
+    // .click .txt .btn span을 클릭했을 때, intro가 fadeOut 돼라
+    // intro span을 클릭하면 section이 보여라
+    $('.click .txt .btn span').click(function() {
+         $('.intro').fadeOut()
+         $('section').addClass('show');
+     })
+
 
 
    

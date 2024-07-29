@@ -33,34 +33,46 @@ img {
 
 
 
-
 /* nav 설정------------------------------ */
 nav {
     position: fixed;
-    right: 50px;
-    bottom: 100px;
+    bottom: 0;
+    right: 10px;
     z-index: 99;
+    width: 150px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
  }
 nav ul {}
 nav li {
-    padding: 10px;
     font-size: 25px;
     font-family: "Luckiest Guy", cursive;
-    padding: 20px 10px;
+    padding: 25px 10px;
     color: transparent;
     -webkit-text-stroke: 2px #1D2635;
     letter-spacing: 2px;
     cursor: pointer;
     text-align: right;
+    transition: all 0.3s;
 }
 
 nav li.on {
     color: #C2F361;
 }
 
+nav li:hover {
+    color: #C2F361;
+}
 
 
-section {}
+
+section {
+    display: none;
+}
+section.show {
+    display: block;
+}
 section article {
     width: 100%;
     height: 100vh;
@@ -69,7 +81,7 @@ section article {
 /* 배경 동영상 설정--------------- */
 .bg_vid {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     position: fixed;
     left: 0;
     top: 0;
@@ -77,8 +89,192 @@ section article {
 }
 .bg_vid video {
     width: 100%;
-    min-width: 1600px;
+    height: auto;
 }
+
+
+
+/* 인트로 설정 */
+.intro {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+}
+
+/* 인트로 배경 설정 */
+.intro .bg_vid {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.intro .bg_vid video {
+    width: 100%;
+    height: auto;
+}
+
+
+
+.intro .icon {}
+.intro .icon ul {
+    width: 300px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.intro .icon li {
+    margin: 10px;
+    width: 140px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+
+/* 클릭팝업 설정 */
+.intro .click {
+    width: 550px;
+    height: 360px;
+    background-color: #F6F9FF;
+    border: 2px solid #1D2635;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -180px;
+    margin-left: -275px;
+    z-index: 15;
+}
+.intro .click .close {
+    width: 550px;
+    height: 35px;
+    border-bottom: 2px solid #1D2635;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #61A3FF;
+}
+.intro .click .close p {
+    font-family: "Black Han Sans", sans-serif;
+    color: #F6F9FF;
+    font-size: 20px;
+    margin-left: 10px;
+    letter-spacing: 2px;
+}
+.intro .click .close span {
+    border-left: 2px solid #1D2635;
+    width: 35px;
+    height: 35px;
+    background-color: #FF6161;
+    cursor: pointer;
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.6;
+}
+.intro .click .txt {
+    width: 100%;
+    height: 323px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; 
+}
+.intro .click .txt h1 {
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 35px;
+    font-weight: normal;
+    color: #1D2635;
+    padding-top: 30px;
+}
+
+.intro .click .txt .btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+    width: 550px;
+}
+.intro .click .txt .btn span {
+   font-family: "Luckiest Guy", cursive;
+   border: 2px solid #1D2635;
+   padding: 20px 60px;
+   font-size: 30px;
+   color: #1D2635;
+   cursor: pointer;
+   transition: all 0.3s;
+    
+}
+.intro .click .txt .btn span:hover {
+    background-color: #061F62;
+    color: #F6F9FF;
+}
+
+
+/* 인트로 팝업 이미지 설정 */
+.intro .curious {
+    width: 350px;
+    height: 270px;
+    position: absolute;
+    top: 10%;
+    left: 18%;
+    margin-left: 50px;
+    margin-top: 50px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9;
+}
+.intro .curious img {
+    transform: scale(0.8);
+}
+
+.intro .hey {
+    width: 350px;
+    height: 270px;
+    position: absolute;
+    top: 13%;
+    right: 19%;
+    margin-top: 30px;
+    margin-right: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 16;
+}
+.intro .hey img {
+    transform: scale(0.8);
+}
+
+.intro .folder {
+    position: absolute;
+    top: 60%;
+    right: 20%;
+    margin-top: -20px;
+    margin-right: -10px;
+    width: 130px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.intro .folder img {}
+
+
+
+
 
 
 
